@@ -8,7 +8,6 @@ import { generateMarkdown } from "../utils/markdown";
 import path from "path";
 import fs from "fs";
 
-console.log(process.env.OPENAI_API_KEY);
 
 const program = new Command();
 
