@@ -29,12 +29,12 @@ interface CommiitoResponse {
   response: GPTResponse[];
 }
 
-interface GPTResponse {
+export interface GPTResponse {
   domain?: string;
   scope?: string;
-  commit_type?: CommitType;
+  commitType?: CommitType;
   title: string;
   description: string;
-  files_to_include: string[];
+  filesToInclude: string[];
   commands?: string;
 }
