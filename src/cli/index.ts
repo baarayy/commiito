@@ -8,7 +8,6 @@ import { generateMarkdown } from "../utils/markdown";
 import path from "path";
 import fs from "fs";
 
-
 const program = new Command();
 
 program
@@ -76,7 +75,7 @@ program
         console.log("⚠️  AI reported failure:", aiResponse);
         process.exit(1);
       }
-
+      console.log("something...");
       const markdownContent = generateMarkdown(aiResponse);
 
       const outputPath = path.resolve(process.cwd(), "AI_COMMIT_PLAN.md");

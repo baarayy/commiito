@@ -1,3 +1,5 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 import { OpenAI } from "openai";
 import { UserPrompt } from "../types";
 import { BuildPrompt } from "../types/prompts";
