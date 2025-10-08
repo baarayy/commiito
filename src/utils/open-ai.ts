@@ -1,5 +1,6 @@
 import { OpenAI } from "openai";
 import { UserPrompt } from "../types";
+import { BuildPrompt } from "../types/prompts";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -11,8 +12,9 @@ export const sendPrompt = async(prompt: UserPrompt) {
         messages: [
             {
                 role: "user",
-                content: ``
+                content: BuildPrompt(prompt)
             }
-        ]
+        ],
+        response_format: {type: "json_object"}
     })
 }

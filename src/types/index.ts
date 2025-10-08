@@ -16,6 +16,7 @@ export interface UserPrompt {
   domain: string;
   scope: string;
   commitType: CommitType;
+  subject:string;
   diff: string;
 }
 
