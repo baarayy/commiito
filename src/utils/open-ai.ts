@@ -7,12 +7,14 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.GEMINI_KEY,
+  baseURL:
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
 });
 
 export const sendPrompt = async (prompt: UserPrompt) => {
   const response = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: "gemini-2.0-flash",
     messages: [
       {
         role: "user",
